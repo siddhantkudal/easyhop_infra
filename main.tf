@@ -2,27 +2,27 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-module "EC2vpc" {
-  source                     = "./ec2"
-    providers = {
-        aws = aws
-      }
-  region                     = "ap-south-1"
-  cidr_vpc                   = "10.0.0.0/16"
-  application                = "EasyShop"
-  public_subnet1_cidr        = "10.0.1.0/24"
-  public_subnet2_cidr        = "10.0.2.0/24"
-  private_subnet1_cidr       = "10.0.3.0/24"
-  private_subnet2_cidr       = "10.0.4.0/24"
-  intrasubnet1_cidr          = "10.0.5.0/24"
-  intrasubnet2_cidr          = "10.0.6.0/24"
-  instance_count             = 1
-  #instance_image             = #"ami-0866a3c8686eaeeba"
-  instance_image                       = "ami-02521d90e7410d9f0"
-  instance_type              = "t2.medium"
-  cidr_block_internet_access = "0.0.0.0/0"
-  cluster_name               = "sgk-eks-cluster"
-}
+# module "EC2vpc" {
+#   source                     = "./ec2"
+#     providers = {
+#         aws = aws
+#       }
+#   region                     = "ap-south-1"
+#   cidr_vpc                   = "10.0.0.0/16"
+#   application                = "EasyShop"
+#   public_subnet1_cidr        = "10.0.1.0/24"
+#   public_subnet2_cidr        = "10.0.2.0/24"
+#   private_subnet1_cidr       = "10.0.3.0/24"
+#   private_subnet2_cidr       = "10.0.4.0/24"
+#   intrasubnet1_cidr          = "10.0.5.0/24"
+#   intrasubnet2_cidr          = "10.0.6.0/24"
+#   instance_count             = 1
+#   #instance_image             = #"ami-0866a3c8686eaeeba"
+#   instance_image                       = "ami-02521d90e7410d9f0"
+#   instance_type              = "t2.medium"
+#   cidr_block_internet_access = "0.0.0.0/0"
+#   cluster_name               = "sgk-eks-cluster"
+# }
 
 
 
